@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -63,6 +56,49 @@ html, body {
 .logos{
     margin: 0%;
     padding: 0%;
+}
+
+/*marquee tag*/
+.marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee img {
+    max-height: 128px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.marquee:hover img {
+    transform: scale(1.1);
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee img {
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee img {
+        max-height: 80px;
+    }
 }
 
 /* Styling the nav bar */
