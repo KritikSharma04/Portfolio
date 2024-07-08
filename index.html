@@ -294,7 +294,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <a href="mailto:chikkusharma070@gmail.com"><i class="fas fa-envelope"></i>
+                                            <a href="mailto:kritiksharma200804@gmail.com"><i class="fas fa-envelope"></i>
                                             <div class="info">
                                                 <div class="head">Mail I'd</div>
                                                 <div class="sub-title">kritiksharma200804@gmail.com</div></a>
@@ -315,17 +315,17 @@
                             <form action="#">
                                 <div class="fields">
                                     <div class="field name">
-                                        <input type="text" placeholder="Name" required>
+                                        <input type="text" id="name" name="name" placeholder="Name" required>
                                     </div>
                                     <div class="field email">
-                                        <input type="email" placeholder="Gmail" required>
+                                        <input type="email" id="gmail" name="gmail" placeholder="Gmail" required>
                                     </div>
                                 </div>
                                     <div class="field">
-                                        <input type="text" placeholder="Subject" required>
+                                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
                                     </div>
                                     <div class="field textarea">
-                                        <textarea cols="30" rows="10" placeholder="Project(Explanation)" required></textarea>
+                                        <textarea cols="30" rows="10" id="project" name="project" placeholder="Explanation" required></textarea>
                                     </div>
                                     <div class="button">
                                         <button type="submit">Send messsage</button>
@@ -356,6 +356,38 @@
             </div>
         </footer>
 <script src="functioning.js"></script>
+<!-- <script>
+    document.getElementById('portfolioForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      var formData = {
+        'name': document.getElementById('name').value,
+        'gmail': document.getElementById('gmail').value,
+        'subject': document.getElementById('subject').value,
+        'project': document.getElementById('project').value
+      };
+      
+      fetch('https://script.google.com/macros/s/AKfycbxRdEwgJxpEmGkiyvEA_R1PTNQsoq6aP9tujjczVet5/dev', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          alert('Form submitted successfully!');
+        } else {
+          alert('Failed to submit form');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit form');
+      });
+    });
+    </script> -->
 <!-- <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyNkFUKZ6zx76sdWzzeXklrE5cYOFo9y9_LBnecGJA77crSZcoorDciZrqGWgWpDBxS/exec'
     const form = document.forms['submit-to-google-sheet']
